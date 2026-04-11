@@ -1,89 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kunal Masurkar | Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Dynamic Background -->
+  <div id="tsparticles"></div>
+
   <header class="hero">
-    <nav class="navbar">
-      <div class="logo" style="margin-bottom: 0.3rem;">Kunal Masurkar</div>
+    <nav class="navbar glass">
+      <div class="logo">KUNAL<span class="gradient-text">.</span></div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button class="toggle-mode" id="toggleMode">🌙</button></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button class="toggle-mode" id="toggleMode" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </nav>
-    <div class="hero-content">
-      <h1>Hello! I'm <span class="accent">Kunal Masurkar</span></h1>
-      <h2 id="animated-text">A passionate cybersecurity and forensics student</h2>
-      <p>BTech in Computer Science (Cybersecurity & Forensics) at MIT ADT UNIVERSITY</p>
-      <a href="#contact" class="cta">Connect with Me</a>
+    <div class="hero-content glass" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+      <div class="hero-badge">Welcome</div>
+      <h1>Hello! I'm <span class="gradient-text">Kunal Masurkar</span></h1>
+      <h2 id="animated-text" class="typewriter-text"></h2>
+      <p class="hero-desc">BTech in Computer Science (Cybersecurity & Forensics) at MIT ADT UNIVERSITY</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Connect with Me</a>
+        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> View Work</a>
+      </div>
     </div>
   </header>
+
   <main>
-    <section id="about" class="card fade-in">
-      <h2>About Me</h2>
-      <p>
-Hi, I'm Kunal Masurkar, a passionate Computer Science undergraduate specializing in Cybersecurity and Forensics at MIT ADT University. With a strong foundation in programming, machine learning, and ethical hacking, I enjoy building secure systems that solve real-world problems.
-
-I’ve completed multiple certifications from IBM, Cisco, Meta, and IIT Bombay, and have interned at IIT Bombay to gain hands-on experience in applied research and software development. My projects range from Heart Disease Prediction and Fake Hotel Review Detection to advanced biometric security systems like BioCipher and self-healing cybersecurity frameworks.
-
-Beyond tech, I’m a creative mind with a passion for photography, cinematography, content creation, and adventure trekking. I believe in collaborative leadership, lifelong learning, and using technology for good.
-      </p>
-      <ul class="about-list">
-        <li>Hobbies: Traveling, adventure trekking, movies, music, researching AI & cybersecurity trends.</li>
-      </ul>
-    </section>
-    <section id="skills" class="card fade-in">
-      <h2>Skills & Tools</h2>
-      <div class="skills-grid">
-        <div class="skill">Python</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">C++</div>
-        <div class="skill">React</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">TensorFlow</div>
-        <div class="skill">Git</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Kubernetes</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">Arduino</div>
+    <section id="about" class="section fade-in">
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <div class="card glass about-card">
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Hi, I'm <strong>Kunal Masurkar</strong>, a passionate Computer Science undergraduate specializing in Cybersecurity and Forensics at MIT ADT University. With a strong foundation in programming, machine learning, and ethical hacking, I enjoy building secure systems that solve real-world problems.
+            </p>
+            <p>
+              I’ve completed multiple certifications from IBM, Cisco, Meta, and IIT Bombay, and have interned at IIT Bombay to gain hands-on experience in applied research and software development. My projects range from Heart Disease Prediction and Fake Hotel Review Detection to advanced biometric security systems like BioCipher and self-healing cybersecurity frameworks.
+            </p>
+            <p>
+              Beyond tech, I’m a creative mind with a passion for photography, cinematography, content creation, and adventure trekking. I believe in collaborative leadership, lifelong learning, and using technology for good.
+            </p>
+            <div class="hobbies-badge">
+              <i class="fa-solid fa-heart"></i> Traveling, Tracking, Media, AI
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-box glass">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h3>B.Tech</h3>
+              <p>Cybersecurity & Forensics</p>
+            </div>
+            <div class="stat-box glass">
+              <i class="fa-solid fa-certificate"></i>
+              <h3>Certified</h3>
+              <p>IBM, Cisco, Meta</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="projects" class="card fade-in">
-      <h2>Projects</h2>
-      <ul class="projects-list">
-  <li><b>Self-Healing Cybersecurity System:</b> AI-driven system that detects cyberattacks and automatically applies countermeasures.</li>
-  <li><b>BioCipher:</b> Biometric-secured file manager with role-based access and Fernet encryption for sensitive data protection.</li>
-  <li><b>Brute Force Attack Simulator:</b> Web-based tool that simulates brute force attacks and defenses using Firebase and reCAPTCHA.</li>
-  <li><b>Phishing URL Detector:</b> ML-powered system that classifies URLs as malicious or safe to prevent phishing attacks.</li>
-  <li><b>Online Payment Fraud Detection:</b> ML-based system to enhance online payment security and fraud prevention.</li>
-  <li><b>Fake Hotel Review Project:</b> ML model to identify and filter fraudulent hotel reviews.</li>
-  <li><b>Heart Disease Prediction:</b> ML model to predict heart disease risk based on patient data.</li>
-  <li>See more on <a href="https://github.com/kunal-masurkar" target="_blank">GitHub</a>.</li>
-      </ul>
+
+    <section id="skills" class="section fade-in">
+      <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-brands fa-python skill-icon"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-brands fa-js skill-icon"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-solid fa-c skill-icon"></i>
+          <span>C++</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-brands fa-react skill-icon"></i>
+          <span>React</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-brands fa-node skill-icon"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-solid fa-brain skill-icon"></i>
+          <span>TensorFlow</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-brands fa-git-alt skill-icon"></i>
+          <span>Git</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-brands fa-docker skill-icon"></i>
+          <span>Docker</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-solid fa-dharmachakra skill-icon"></i>
+          <span>Kubernetes</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-solid fa-database skill-icon"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-card glass" data-tilt data-tilt-scale="1.1">
+          <i class="fa-solid fa-microchip skill-icon"></i>
+          <span>Arduino</span>
+        </div>
+      </div>
     </section>
-    <section id="contact" class="card fade-in">
-      <h2>Contact & Socials</h2>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:kunalmasurkar26@gmail.com">kunalmasurkar26@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/kunal-masurkar-link" target="_blank">linkedin.com/in/kunal-masurkar-8494a123a</a></li>
-        <li>GitHub: <a href="https://github.com/kunal-masurkar" target="_blank">github.com/kunal-masurkar</a></li>
-        <li>Twitter/X: <a href="https://x.com/KunalMasurkar2" target="_blank">@KunalMasurkar2</a></li>
-        <li>Linktree: <a href="https://linktr.ee/kunalmasurkar" target="_blank">linktr.ee/kunalmasurkar</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-      </ul>
+
+    <section id="projects" class="section fade-in">
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <div class="projects-grid">
+        
+        <div class="project-card glass">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fa-solid fa-shield-virus project-icon"></i>
+              <h3>Self-Healing System</h3>
+            </div>
+            <p>AI-driven system that detects cyberattacks and automatically applies countermeasures.</p>
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Security</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fa-solid fa-fingerprint project-icon"></i>
+              <h3>BioCipher</h3>
+            </div>
+            <p>Biometric-secured file manager with role-based access and Fernet encryption.</p>
+            <div class="project-tags">
+              <span class="tag">Cryptography</span>
+              <span class="tag">Biometrics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fa-solid fa-bomb project-icon"></i>
+              <h3>Brute Force Simulator</h3>
+            </div>
+            <p>Web-based tool simulating brute force attacks and defenses using Firebase and reCAPTCHA.</p>
+            <div class="project-tags">
+              <span class="tag">Web Sec</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fa-solid fa-link-slash project-icon"></i>
+              <h3>Phishing URL Detector</h3>
+            </div>
+            <p>ML-powered system that classifies URLs as malicious or safe to prevent phishing attacks.</p>
+            <div class="project-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Networking</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card glass">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fa-solid fa-credit-card project-icon"></i>
+              <h3>Payment Fraud Detection</h3>
+            </div>
+            <p>ML-based system to enhance online payment security and detect anomalies.</p>
+            <div class="project-tags">
+              <span class="tag">ML</span>
+              <span class="tag">FinTech</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass github-card">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fa-brands fa-github project-icon"></i>
+              <h3>Explore More</h3>
+            </div>
+            <p>Discover other projects like Fake Hotel Review Detection & Heart Disease Prediction on GitHub.</p>
+            <a href="https://github.com/kunal-masurkar" target="_blank" class="btn btn-outline" style="margin-top:1rem;">
+              Visit GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      <div class="contact-grid glass">
+        <a href="mailto:kunalmasurkar26@gmail.com" class="contact-item">
+          <div class="icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+          <span>Email Me</span>
+        </a>
+        <a href="https://linkedin.com/in/kunal-masurkar-8494a123a" target="_blank" class="contact-item">
+          <div class="icon-wrap"><i class="fa-brands fa-linkedin-in"></i></div>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/kunal-masurkar" target="_blank" class="contact-item">
+          <div class="icon-wrap"><i class="fa-brands fa-github"></i></div>
+          <span>GitHub</span>
+        </a>
+        <a href="https://x.com/KunalMasurkar2" target="_blank" class="contact-item">
+          <div class="icon-wrap"><i class="fa-brands fa-x-twitter"></i></div>
+          <span>Twitter/X</span>
+        </a>
+        <a href="https://linktr.ee/kunalmasurkar" target="_blank" class="contact-item">
+          <div class="icon-wrap"><i class="fa-solid fa-link"></i></div>
+          <span>Linktree</span>
+        </a>
+      </div>
     </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Kunal Masurkar. All Rights Reserved.</p>
+
+  <footer class="glass-footer">
+    <p>&copy; <span id="year">2025</span> Kunal Masurkar. All Rights Reserved. Built with ❤️ & Code.</p>
   </footer>
+
+  <!-- Scripts -->
+  <!-- tsParticles for Dynamic Background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-stars@2.12.0/tsparticles.preset.stars.bundle.min.js"></script>
+  <!-- Vanilla Tilt for 3D card effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <!-- Custom JS -->
   <script src="js/script.js"></script>
 </body>
-</html> 
+</html>
